@@ -1,0 +1,41 @@
+# Data Structures and Algorithms Learning Project
+# Requirements file for dependencies
+
+# Core dependencies
+# None required - uses only Python standard library
+
+# Optional dependencies for enhanced features
+# Install with: pip install -r requirements.txt
+
+# Visualization dependencies (for complexity analysis plots)
+matplotlib>=3.5.0        # Plotting complexity curves and performance graphs
+numpy>=1.20.0           # Numerical operations for analysis
+
+# Development dependencies (optional)
+pytest>=7.0.0           # Testing framework for unit tests  
+pytest-cov>=4.0.0       # Coverage reporting
+black>=22.0.0           # Code formatting
+flake8>=5.0.0           # Linting and style checking
+mypy>=0.990             # Type checking
+
+# Documentation dependencies (optional)  
+sphinx>=5.0.0           # Documentation generation
+sphinx-rtd-theme>=1.0.0 # ReadTheDocs theme
+
+# Jupyter notebook support (optional)
+notebook>=6.4.0         # Jupyter notebook for interactive exploration
+ipywidgets>=8.0.0       # Interactive widgets for demonstrations
+
+# Performance profiling (optional)
+memory-profiler>=0.60.0 # Memory usage analysis
+line-profiler>=4.0.0    # Line-by-line timing analysis
+
+# Note: This project is designed to work with Python 3.7+ standard library only.
+# All above dependencies are optional and provide enhanced functionality:
+#
+# - matplotlib/numpy: Enable visualization features in complexity_analysis module
+# - pytest: Run comprehensive test suites  
+# - black/flake8/mypy: Development tools for code quality
+# - sphinx: Generate documentation from docstrings
+# - notebook: Interactive exploration of data structures
+# - profiling tools: Performance analysis and optimization
