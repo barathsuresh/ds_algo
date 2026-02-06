@@ -1,7 +1,6 @@
 from typing import List
 import heapq
-from collections import Counter
-
+from collections import defaultdict
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         """
@@ -24,7 +23,32 @@ class Solution:
         Follow up: Your algorithm's time complexity must be better than O(n log n), 
         where n is the array's size.
         """
+        count_freq = defaultdict(int)
+        res = []
+        for i in nums:
+            count_freq[i] += 1
+        for x,v in enumerate(count_freq):
+            heapq.heappush(res,(v,x))
+            if len(res) > k:
+                heapq.heappop(res)
         
+        return [val for freq, val in res]
+    
+    def topKFrequentBucketSort(self, nums: List[int], k: int) -> List[int]:
+        count = defaultdict(int)
+        freq = [[] for i in range(len(nums) + 1)]
+        res = []
+        for n in nums:
+            count[n] += 1
+
+        for n, c in count.items():
+            freq[c].append(n)
+
+        for i in range(len(freq) - 1, 0, -1):
+            for n in freq[i]:
+                res.append(n)
+                if len(res) == k:
+                    return res
 
 if __name__ == "__main__":
     solver = Solution()
