@@ -1,5 +1,5 @@
 
-````markdown
+
 # Python Algorithm Interview Cheat Sheet 🚀
 
 A curated collection of Python templates for the most common algorithmic patterns found in technical interviews (Google, Meta, Amazon, etc.).
